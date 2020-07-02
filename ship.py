@@ -1,4 +1,5 @@
 import pygame
+from settings import IMAGE_PATH
 
 
 class Ship:
@@ -9,7 +10,7 @@ class Ship:
         self.ai_settings = ai_settings
 
         # Loading a ship image and getting a rectangle.
-        self.image = pygame.image.load('images/ship.bmp')
+        self.image = pygame.image.load(IMAGE_PATH + 'ship.bmp')
         self.rect = self.image.get_rect()
 
         # Each new ship appears at the bottom of the screen.

@@ -1,6 +1,6 @@
 import pygame
 from pygame.sprite import Group
-from game_functions import check_events, update_screen, update_bullets
+from game_functions import check_events, update_screen, update_bullets, create_fleet, update_aliens
 from ship import Ship
 from settings import Settings
 
@@ -13,12 +13,15 @@ def run_game():
     pygame.display.set_caption('Alien Invasion')
     ship = Ship(ai_settings, screen)
     bullets = Group()
+    aliens = Group()
+    create_fleet(ai_settings, screen, ship, aliens)
 
     while True:
         check_events(ai_settings, screen, ship, bullets)
         ship.update()
         update_bullets(bullets)
-        update_screen(ai_settings, screen, ship, bullets)
+        update_aliens(aliens)
+        update_screen(ai_settings, screen, ship, aliens, bullets)
 
 
 if __name__ == '__main__':
