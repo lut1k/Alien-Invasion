@@ -1,4 +1,4 @@
-##Game "Alien invasion".
+## Game "Alien invasion".
 
 Each player controls a ship located in the middle of the bottom edge of the screen.
 The player moves the ship left and right with the control keys or the cursor; key
