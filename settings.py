@@ -1,6 +1,5 @@
 from os.path import abspath, dirname
-
-from pygame import image, transform
+from pygame import image
 
 BASE_PATH = abspath(dirname(__file__))
 IMAGE_PATH = BASE_PATH + '/images/'
@@ -17,15 +16,16 @@ class Settings:
         self.background = image.load(IMAGE_PATH + 'background.jpg')  # TODO: разобраться
         self.bg_color = (230, 230, 230)
         self.ship_speed_factor = 1.5
+        self.ship_limit = 3
 
         # Bullet options
-        self.bullet_speed_factor = 2
+        self.bullet_speed_factor = 3
         self.bullet_width = 3
         self.bullet_height = 15
         self.bullet_color = 255, 0, 0
         self.bullets_allowed = 5
 
         # Aliens options
-        self.alien_speed_factor = 1
+        self.alien_speed_factor = 1.5
         self.fleet_drop_speed = 10
         self.fleet_direction = 1  # 1 - move right; -1 - move left
