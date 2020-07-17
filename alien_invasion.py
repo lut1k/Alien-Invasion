@@ -23,12 +23,12 @@ def run_game():
     create_fleet(ai_settings, screen, ship, aliens)
 
     while True:
-        check_events(ai_settings, screen, stats, play_button, ship, aliens, bullets)
+        check_events(ai_settings, screen, stats, play_button, ship, aliens, bullets, scoreboard)
         update_screen(ai_settings, screen, stats, scoreboard, ship, aliens, bullets, play_button)
         if stats.game_active:
             update_bullets(ai_settings, screen, stats, scoreboard, ship, aliens, bullets)
             ship.update()
-            update_aliens(ai_settings, stats, screen, ship, aliens, bullets)
+            update_aliens(ai_settings, stats, screen, ship, scoreboard, aliens, bullets)
 
 
 if __name__ == '__main__':
